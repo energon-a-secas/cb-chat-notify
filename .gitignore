@@ -1,0 +1,4 @@
+actions/
+test.rb
+*.gem
+*.gemspec
