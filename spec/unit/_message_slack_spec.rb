@@ -6,7 +6,7 @@ describe MessageSlack do
     let(:text) { 'RTest' }
     let(:test_channel) { 'energon_hq' }
     let(:fake_channel) { 'fake channel' }
-    let(:slack) { EnergonNotify.new(slack_enabled: true) }
+    let(:slack) { NotifyEnergon.new(slack_enabled: true) }
 
     context 'when post succeeds' do
       it { expect(slack.send_message(text, test_channel).ok).to be true }
@@ -22,7 +22,7 @@ describe MessageSlack do
     let(:test_id) { 'UR0KGQUQK' }
     let(:fake_id) { 'FAKEID123' }
     let(:test_channel) { 'energon_hq' }
-    let(:slack) { EnergonNotify.new(slack_enabled: true) }
+    let(:slack) { NotifyEnergon.new(slack_enabled: true) }
 
     context 'when dm succeeds' do
       it { expect(slack.send_direct_message(test_id, test_channel)).equal?(Hash) }
@@ -39,7 +39,7 @@ describe MessageSlack do
     let(:fake_icon) { 'j' }
     let(:test_channel) { '#energon_hq' }
     let(:fake_channel) { 'hq-developmnt-logs' }
-    let(:slack) { EnergonNotify.new(slack_enabled: true) }
+    let(:slack) { NotifyEnergon.new(slack_enabled: true) }
     let(:message) { slack.send_message(text, test_channel).message }
 
     context 'when reaction succeeds' do

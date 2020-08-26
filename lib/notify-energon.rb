@@ -5,7 +5,7 @@ require_relative "modules/message_discord"
 require_relative "credentials"
 
 # Slack Set Up
-class EnergonNotify < Credentials
+class NotifyEnergon < Credentials
   include MessageSlack
   include SearchOnSlack
   include MessageDiscord

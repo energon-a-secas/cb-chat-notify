@@ -8,7 +8,7 @@ describe SearchOnSlack do
     let(:test_group_id) { 'CQZA6RJ2E' }
     let(:test_im_id) { 'UR0KGQUQK' }
     let(:fake_channel_id) { 'F4K3CH4NN3L' }
-    let(:slack) { EnergonNotify.new(slack_enabled: true) }
+    let(:slack) { NotifyEnergon.new(slack_enabled: true) }
 
     context 'when info search succeeds' do
       it { expect(slack.conversation_type(test_channel_id)).to eql 'channel' }
@@ -25,7 +25,7 @@ describe SearchOnSlack do
     let(:test_channel_name) { '#hq-development-logs' }
     let(:fake_channel_id) { 'F4K3CH4NN3L' }
     let(:fake_channel_name) { 'hq-development-logs' }
-    let(:slack) { EnergonNotify.new(slack_enabled: true) }
+    let(:slack) { NotifyEnergon.new(slack_enabled: true) }
 
     context 'when message search succeeds' do
       it { expect(slack.search_messages_on(test_channel_id).message).equal?(Array) }
@@ -41,7 +41,7 @@ describe SearchOnSlack do
   end
 
   describe '#get_user_list' do
-    let(:slack) { EnergonNotify.new(slack_enabled: true) }
+    let(:slack) { NotifyEnergon.new(slack_enabled: true) }
 
     context 'when search for users succeeds' do
       it { expect(slack.get_user_list).equal?(Array) }
@@ -49,7 +49,7 @@ describe SearchOnSlack do
   end
 
   describe '#conversation_list' do
-    let(:slack) { EnergonNotify.new(slack_enabled: true) }
+    let(:slack) { NotifyEnergon.new(slack_enabled: true) }
 
     context 'when search for channels succeeds' do
       it { expect(slack.conversation_list).equal?(Array) }

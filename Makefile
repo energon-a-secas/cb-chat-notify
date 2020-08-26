@@ -1,4 +1,4 @@
-VERSION_FILE := 0.2.0
+VERSION_FILE := 0.2.1
 
 deploy:
 	gem build notify-energon.gemspec
