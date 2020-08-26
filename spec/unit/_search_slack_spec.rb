@@ -1,4 +1,4 @@
-require './lib/energon-notify'
+require './lib/notify-energon'
 require './lib/modules/search_slack'
 
 describe SearchOnSlack do

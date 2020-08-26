@@ -1,13 +1,13 @@
 VERSION_FILE := 0.2.1
 
 deploy:
-	gem build energon-notify.gemspec
-	gem install ./energon-notify-$(VERSION_FILE).gem
+	gem build notify-energon.gemspec
+	gem install ./notify-energon-$(VERSION_FILE).gem
 
 push:
-	gem push energon-notify-$(VERSION_FILE).gem
+	gem push notify-energon-$(VERSION_FILE).gem
 
 clean:
-	gem uninstall energon-notify
+	gem uninstall notify-energon
 
 test: clean deploy
